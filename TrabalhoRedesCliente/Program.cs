@@ -7,7 +7,7 @@ class Program
 {
     static async Task Main(string[] args)
     {
-        string serverAddress = "127.0.0.1"; // Substitua pelo IP ou hostname do servidor
+        string serverAddress = "172.17.0.1"; // Substitua pelo IP ou hostname do servidor
         //docker: host.docker.internal
         int port = 8080;
 
@@ -52,10 +52,10 @@ class Program
                     byte[] respostaBytes = Encoding.UTF8.GetBytes(resposta);
                     await stream.WriteAsync(respostaBytes, 0, respostaBytes.Length);
                     // Aguarda e exibe a pontuação
-                    buffer = new byte[256];
-                    bytesRead = await stream.ReadAsync(buffer, 0, buffer.Length);
-                    string pontuacao = Encoding.UTF8.GetString(buffer, 0, bytesRead).Trim();
-                    Console.WriteLine(pontuacao + "AQUI");
+                    // buffer = new byte[256];
+                    // bytesRead = await stream.ReadAsync(buffer, 0, buffer.Length);
+                    // string pontuacao = Encoding.UTF8.GetString(buffer, 0, bytesRead).Trim();
+                    // Console.WriteLine(pontuacao);
                 }
 
             }

@@ -57,8 +57,17 @@ class Program
             while (!perguntaRespondida)
             {
                 // Envia a pergunta para o jogador ativo
-                byte[] perguntaBytes = Encoding.UTF8.GetBytes(perguntas[i].Enunciado);
+                string mensagem = perguntas[i].Enunciado;
+                if(perguntas[i].isPerguntaPassada)
+                {
+                    mensagem = mensagem + " \nEssa mensagem foi passada pelo outro jogador, se você passar essa pergunta você perderá ponto.";
+                }
+
+
+                byte[] perguntaBytes = Encoding.UTF8.GetBytes(mensagem);
                 await streams[turno].WriteAsync(perguntaBytes, 0, perguntaBytes.Length);
+
+
                 Console.WriteLine($"Enviando pergunta {i + 1} para o cliente {turno + 1}: {perguntas[i].Enunciado}\nResponder ou Passar?\n");
 
                 // Pergunta se ele quer responder ou passar
@@ -95,9 +104,18 @@ class Program
                 }
                 else if (resposta == "passar")
                 {
-                    Console.WriteLine($"Cliente {turno + 1} escolheu passar a pergunta.\n");
-                    perguntaRespondida = false; // Passa para o próximo jogador
-                    perguntas[i] = (perguntas[i].Enunciado, perguntas[i].Resposta, true); // Marca a pergunta como passada
+                    if(perguntas[i].isPerguntaPassada) 
+                    {
+                        Console.WriteLine($"Cliente {turno + 1} desistiu da pergunta.\n");
+                        perguntas[i] = (perguntas[i].Enunciado, perguntas[i].Resposta, false); // Marca a pergunta como passada
+                        perguntaRespondida = true; // Passa para o próximo jogador
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Cliente {turno + 1} escolheu passar a pergunta.\n");
+                        perguntaRespondida = false; // Passa para o próximo jogador
+                        perguntas[i] = (perguntas[i].Enunciado, perguntas[i].Resposta, true); // Marca a pergunta como passada
+                    }
                 }
 
                 // Envia a pontuação após cada pergunta
@@ -105,7 +123,7 @@ class Program
                 // await streams[turno].WriteAsync(pontuacaoBytes, 0, pontuacaoBytes.Length);
 
                 // Alterna o turno entre os jogadores se não for pergunta passada
-                // if (!perguntas[i].isPerguntaPassada || !(resposta == "responder"))
+                if (!perguntas[i].isPerguntaPassada || !(resposta == "responder"))
                     turno = (turno + 1) % 2;
             }
         }
