@@ -9,3 +9,5 @@ docker build -t my-csharp-app .
  docker build -t my-csharp-app-client2 .
 
  docker run -it my-csharp-app-client
+
+achar host linux: ip addr show docker0
