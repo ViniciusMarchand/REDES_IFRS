@@ -1,0 +1,14 @@
+C:\Users\Vinicius\Documents\Trabalhos_IF\RE\TrabalhoRedes\bin\Debug\net7.0\TrabalhoRedes.exe
+C:\Users\Vinicius\Documents\Trabalhos_IF\RE\TrabalhoRedes\bin\Debug\net7.0\TrabalhoRedes.deps.json
+C:\Users\Vinicius\Documents\Trabalhos_IF\RE\TrabalhoRedes\bin\Debug\net7.0\TrabalhoRedes.runtimeconfig.json
+C:\Users\Vinicius\Documents\Trabalhos_IF\RE\TrabalhoRedes\bin\Debug\net7.0\TrabalhoRedes.dll
+C:\Users\Vinicius\Documents\Trabalhos_IF\RE\TrabalhoRedes\bin\Debug\net7.0\TrabalhoRedes.pdb
+C:\Users\Vinicius\Documents\Trabalhos_IF\RE\TrabalhoRedes\obj\Debug\net7.0\TrabalhoRedes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Vinicius\Documents\Trabalhos_IF\RE\TrabalhoRedes\obj\Debug\net7.0\TrabalhoRedes.AssemblyInfoInputs.cache
+C:\Users\Vinicius\Documents\Trabalhos_IF\RE\TrabalhoRedes\obj\Debug\net7.0\TrabalhoRedes.AssemblyInfo.cs
+C:\Users\Vinicius\Documents\Trabalhos_IF\RE\TrabalhoRedes\obj\Debug\net7.0\TrabalhoRedes.csproj.CoreCompileInputs.cache
+C:\Users\Vinicius\Documents\Trabalhos_IF\RE\TrabalhoRedes\obj\Debug\net7.0\TrabalhoRedes.dll
+C:\Users\Vinicius\Documents\Trabalhos_IF\RE\TrabalhoRedes\obj\Debug\net7.0\refint\TrabalhoRedes.dll
+C:\Users\Vinicius\Documents\Trabalhos_IF\RE\TrabalhoRedes\obj\Debug\net7.0\TrabalhoRedes.pdb
+C:\Users\Vinicius\Documents\Trabalhos_IF\RE\TrabalhoRedes\obj\Debug\net7.0\TrabalhoRedes.genruntimeconfig.cache
+C:\Users\Vinicius\Documents\Trabalhos_IF\RE\TrabalhoRedes\obj\Debug\net7.0\ref\TrabalhoRedes.dll
