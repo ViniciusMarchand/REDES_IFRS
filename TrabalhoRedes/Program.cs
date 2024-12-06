@@ -56,7 +56,7 @@ class Program
             bool perguntaRespondida = false;
             while (!perguntaRespondida)
             {
-                // Envia a pergunta para o jogador ativo
+
                 string mensagem = perguntas[i].Enunciado;
                 if(perguntas[i].isPerguntaPassada)
                 {
