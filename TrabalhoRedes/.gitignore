@@ -43,3 +43,6 @@ ScaffoldingReadMe.txt
 *.edmx
 *.edmx.diagram
 *.edmx.sql
+
+.bin/
+.obj/
